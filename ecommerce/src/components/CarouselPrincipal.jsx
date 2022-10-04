@@ -6,14 +6,14 @@ import Carousel from "react-bootstrap/Carousel";
 const CarouselPrincipal = () => {
   const BASE_URL = "https://ecomerce-master.herokuapp.com/api/v1/";
 
-  const [ProductsInfo, setProductsInfo] = useState({});
+//   const [ProductsInfo, setProductsInfo] = useState({});
 
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}items`)
-      .then(({ data }) => setProductsInfo(data))
-      .catch((error) => console.log("error calling SWAPI"));
-  }, []);
+//   useEffect(() => {
+//     axios
+//       .get(`${BASE_URL}items`)
+//       .then(({ data }) => setProductsInfo(data))
+//       .catch((error) => console.log("error calling SWAPI"));
+//   }, []);
 
   return (
     <Carousel>
