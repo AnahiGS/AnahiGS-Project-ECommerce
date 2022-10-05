@@ -10,7 +10,7 @@ import {
 
 const NavbarComponent = () => {
   return (
-    <Container>
+    
       <Navbar expand="lg" variant="light" bg="light">
         <Container>
           <Navbar.Brand href="#">Navbar</Navbar.Brand>
@@ -45,7 +45,7 @@ const NavbarComponent = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Container>
+    
   );
 };
 
