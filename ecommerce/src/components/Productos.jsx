@@ -20,7 +20,6 @@ const Productos = () => {
     <>
       {ProductsArray.length===0 ? (<h3>cargando productos</h3>)
       : (ProductsArray.map((item,index) => (
-        
         <div key={index}> 
           <Row>
             <Card style={{ width: "18rem" }}>
