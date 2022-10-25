@@ -1,45 +1,33 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
-import axios from 'axios';
+
 import './Products.css'
 
-const Producto = () => {
-  const BASE_URL = "https://ecomerce-master.herokuapp.com/api/v1/";
-  const [ProductsArray, setProductsArray] = useState([]);
-  const [ProductsInfo, setProductsInfo] = useState({})
+const Producto = ({product}) => {
 
-  
-  useEffect(() => {
-
-    axios
-      .get(`${BASE_URL}item`)
-      .then((data) => setProductsArray(data.data))
-      .catch((error) => console.log("error calling API"));
-  }, []);
-
-
-  return <div> 
-    <h1>Productos</h1>
-    {
-      ProductsArray.map(item => {
-        return (
-          <div key={item.id}>
-            <div className="Card">
-              <img src={item.image} style={{ width: '18rem' }}/>
-              <div className="card-body">
-                <h4 className="card-title">{item.product_name}</h4>
-                <p className="card-text text-secondary">{item.description} </p>
-                <Button variant="primary">Agregar al carrito</Button>
-              </div>
-            </div>
-          </div>
-        )
-      })
-    } 
-    
-    
-    
-  </div>    
+  return (
+    <>
+        <div className="col mb-3" >
+            <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer'}} className='card-product'>
+                <Card.Img
+                    fluid
+                    className='card-image'
+                    variant="top" 
+                    src={product.image}
+                />
+                <Card.Body>
+                    <Card.Title>{product.product_name}</Card.Title>
+                    <Card.Text className='brand-product'>
+                        {product.brand}
+                    </Card.Text>
+                    <Card.Text className='priceProduct'>
+                        <h5><b>${product.price} MXN</b></h5>
+                    </Card.Text>
+                </Card.Body>
+            </Card> 
+        </div>
+    </>
+);   
 };
 
 export default Producto;

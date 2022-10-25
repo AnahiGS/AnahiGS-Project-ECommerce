@@ -3,11 +3,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselPrincipal from "./components/CarouselPrincipal";
 import NavbarComponent from "./components/Layer";
-import Producto from "./components/ProductList";
-import Productos from "./components/Productos";
+import ProductsList from "./components/ProductsList";
+
 
 function App() {
-
 
   
   return (
@@ -15,7 +14,7 @@ function App() {
       <NavbarComponent />
       <CarouselPrincipal />
       {/* <Producto /> */}
-      <Productos/>
+      <ProductsList/>
     </div>
   );
 }
