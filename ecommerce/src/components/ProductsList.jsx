@@ -23,6 +23,7 @@ const ProductsList = () => {
 
   return (
     <>  
+    <h1>Productos</h1>
       <Row>
           <div className="col-2">
               <SidebarSearch/>

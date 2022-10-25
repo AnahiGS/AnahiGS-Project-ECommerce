@@ -42,6 +42,12 @@ const NavbarComponent = () => {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
+            <Navbar.Text className="signUp">
+              <a href="#login">Sign up</a>
+            </Navbar.Text>
+            <Navbar.Text className="Login">
+              <a href="#login">Login</a>
+            </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>

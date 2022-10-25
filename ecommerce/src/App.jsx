@@ -1,20 +1,20 @@
 import React from "react";
 // import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-import CarouselPrincipal from "./components/CarouselPrincipal";
-import NavbarComponent from "./components/Layer";
-import ProductsList from "./components/ProductsList";
-
+// import CarouselPrincipal from "./components/CarouselPrincipal";
+// import NavbarComponent from "./components/Navbar";
+// import ProductsList from "./components/ProductsList";
+import Home from './components/Home';
+import NavbarComponent from './components/Navbar';
 
 function App() {
 
   
   return (
     <div className="App">
-      <NavbarComponent />
-      <CarouselPrincipal />
-      {/* <Producto /> */}
-      <ProductsList/>
+      <NavbarComponent/>
+      <Home/>
+      
     </div>
   );
 }
