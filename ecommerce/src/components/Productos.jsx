@@ -9,12 +9,12 @@ const Productos = () => {
             <div className="col-md-4">
                 <Producto/>
             </div>
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
                 <Producto/>
             </div>
             <div className="col-md-4">
                 <Producto/>
-            </div>
+            </div> */}
         </div>
     </div>
   )
