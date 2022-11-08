@@ -8,7 +8,7 @@ const Producto = ({product}) => {
   return (
     <>
         <div className="col mb-3" >
-            <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer'}} className='card-product'>
+            <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer' }} className='card-product'>
                 <Card.Img
                     fluid
                     className='card-image'

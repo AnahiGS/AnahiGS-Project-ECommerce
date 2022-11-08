@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import CarouselPrincipal from "./components/CarouselPrincipal";
 // import NavbarComponent from "./components/Navbar";
 // import ProductsList from "./components/ProductsList";
-import Home from './components/Home';
+import Home from './pages/Home';
 import NavbarComponent from './components/Navbar';
 
 function App() {

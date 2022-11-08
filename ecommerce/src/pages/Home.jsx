@@ -1,6 +1,6 @@
 import React from 'react'
-import CarouselPrincipal from "./CarouselPrincipal";
-import ProductsList from "./ProductsList";
+import CarouselPrincipal from "../components/CarouselPrincipal";
+import ProductsList from "../components/ProductsList";
 
 const Home = () => {
   return (
