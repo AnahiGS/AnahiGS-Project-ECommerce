@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
+import { useParams, useNavigate } from 'react-router-dom'
 
 import './Products.css'
 
 const Producto = ({product}) => {
-
+    const navigate = useNavigate()
   return (
     <>
         <div className="col mb-3" >
@@ -22,8 +23,13 @@ const Producto = ({product}) => {
                     </Card.Text>
                     <Card.Text className='priceProduct'>
                         <h5><b>${product.price} MXN</b></h5>
+                        <Button style={{ width: '4rem'}} onClick={() => {navigate('/portafolio')}}>
+                        Ver
+                        </Button>
                     </Card.Text>
+                    
                 </Card.Body>
+                
             </Card> 
         </div>
     </>

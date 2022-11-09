@@ -1,26 +1,26 @@
 import React from 'react'
+import { useProductContext } from '../context/ProductContext'
 
-const DetallesProduct = ({}) => {
-  return (
-    <>
-        <div className="col mb-3" >
-            <Container>
-                <Image 
-                    src={product.image}
-                />
-                <Card.Body>
-                    <Card.Title>{product.product_name}</Card.Title>
-                    <Card.Text className='brand-product'>
-                        {product.brand}
-                    </Card.Text>
-                    <Card.Text className='priceProduct'>
-                        <h5><b>${product.price} MXN</b></h5>
-                    </Card.Text>
-                </Card.Body>
-            </Container> 
-        </div>
-    </>
-  )
+const DetallesProduct = () => {
+    const context = useProductContext()
+
+    return (
+        <>
+            {context.selectedProduct.product_name
+                ?   <div className="col mb-3" >
+                        <Container>
+                            <Image 
+                                src={context.selectedProduct.image}
+                            />
+                            <h1>{context.selectedProduct.product_name}</h1>
+                            <h4>{context.selectedProduct.brand}</h4>
+                            <h6>{context.selectedProduct.price}</h6>
+                        </Container> 
+                    </div>:
+            }
+                
+        </>
+    )
 }
 
 export default DetallesProduct

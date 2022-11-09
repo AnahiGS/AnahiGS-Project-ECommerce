@@ -6,6 +6,7 @@ const ProductContext = createContext()
 function ProductProvider (props) {
   const BASE_URL = 'https://ecomerce-master.herokuapp.com/api/v1/'
   const [productList, setProductList] = useState([])
+  const [selectedProduct, setSelectedProduct] =useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState ('')
 
@@ -26,6 +27,7 @@ function ProductProvider (props) {
     productList,
     setLoading,
     loading,
+    selectedProduct, setSelectedProduct,
     search,
     setSearch
   }
