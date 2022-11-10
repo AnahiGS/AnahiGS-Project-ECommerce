@@ -1,4 +1,5 @@
 import React from 'react'
+import '../assets/css/form.css'
 
 const Login = () => {
   return (
