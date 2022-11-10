@@ -25,9 +25,7 @@ const ProductsList = () => {
     <>  
     <h1>Productos</h1>
       <Row>
-          <div className="col-2">
-              <SidebarSearch/>
-          </div>
+          
           <div className='col'>
             <div id='box-products' className='row row-cols-4'>
                 { ProductsArray.length===0 ? (<h3>Cargando...</h3>)

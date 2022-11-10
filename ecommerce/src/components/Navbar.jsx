@@ -1,16 +1,14 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Form,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Stack
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Container,Form,Nav,Navbar,NavDropdown, Stack} from "react-bootstrap";
+import { useProductContext } from "../context/ProductContext";
+
 
 const NavbarComponent = () => {
+  const context = useProductContext()
+  const handleSearch = (event) => {
+    context.setSearch(event.target.value)
+  }
+
   return (
     
       <Navbar expand="lg" variant="light" bg="light" >
@@ -43,6 +41,7 @@ const NavbarComponent = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                onChange={handleSearch}
               />
               <Button variant="outline-success">Search</Button>
             </Form>
