@@ -9,12 +9,7 @@ const DetallesProduct = ({product}) => {
         <>
              <div className="col mb-3" >
                   <Container>
-                      <Image 
-                          src={product.image}
-                      />
-                      <h1>{product.product_name}</h1>
-                      <h4>{product.descripcion}</h4>
-                      <h6>{product.price}</h6>
+                      <h1>hola</h1>
                   </Container> 
                 </div>
                    

@@ -33,6 +33,7 @@ const ProductsList = () => {
                 { ProductsArray.length===0 ? (<h3>Cargando...</h3>)
                   : (ProductsArray.map((item,index) => (
                       item.image !== undefined &&(
+                        
                         <Producto
                           product={item}
                           key={index}

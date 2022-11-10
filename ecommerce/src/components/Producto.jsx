@@ -7,16 +7,16 @@ import { useProductContext } from '../context/ProductContext'
 import './Products.css'
 
 const Producto = ({product}) => {
-    // console.log(index)
+    // console.log(product._id)
     const context =useProductContext()
     const navigate = useNavigate()
     const recoverProduct = (id) =>{
-        
-        navigate('/detalles')
+        console.log(id)
+        navigate(`/detalles/${id}`)
     }
   return (
     <>
-        <div className="col mb-3" >
+        <div className="col mb-3" onClick={() => recoverProduct(product._id)}>
             <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer' }} className='card-product'>
                 <Card.Img
                     fluid
@@ -31,7 +31,7 @@ const Producto = ({product}) => {
                     </Card.Text>
                     <Card.Text className='priceProduct'>
                         <h5><b>${product.price} MXN</b></h5>
-                        <Button style={{ width: '4rem'}} onClick={() => recoverProduct(product._id)} >
+                        <Button style={{ width: '4rem'}} >
                         Ver
                         </Button>
                     </Card.Text>
