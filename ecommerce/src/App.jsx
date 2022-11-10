@@ -14,7 +14,8 @@ function App() {
   return (
     <ProductProvider>
       <div className="App">
-        <NavbarComponent/>
+        <NavbarComponent
+        />
         <RoutesIndex />   
       </div>
     </ProductProvider>

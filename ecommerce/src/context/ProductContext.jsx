@@ -9,6 +9,7 @@ function ProductProvider (props) {
   const [selectedProduct, setSelectedProduct] =useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState ('')
+  
 
   /* Se obtienen los productos de la API */
   useEffect(() => {
@@ -44,6 +45,7 @@ function ProductProvider (props) {
 const useProductContext = () => {
   const context = useContext(ProductContext)
   return context
+  
 }
 
 export {

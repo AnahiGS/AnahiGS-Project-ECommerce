@@ -33,7 +33,6 @@ const ProductsList = () => {
                             <Producto
                             {...item}/>
                         </div>
-                        
                       )             
                     ) 
                   )

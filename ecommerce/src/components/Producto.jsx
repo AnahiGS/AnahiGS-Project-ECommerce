@@ -6,7 +6,7 @@ import { useProductContext } from '../context/ProductContext'
 
 import './Products.css'
 
-const Producto = ({ product_name, image, price, _id, brand }) => {
+const Producto = ({ product_name, image, price, _id, brand, description }) => {
     // console.log(product._id)
     const context =useProductContext()
     const navigate = useNavigate()
