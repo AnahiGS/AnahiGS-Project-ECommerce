@@ -6,19 +6,20 @@ import {
   Nav,
   Navbar,
   NavDropdown,
+  Stack
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
     
-      <Navbar expand="lg" variant="light" bg="light">
+      <Navbar expand="lg" variant="light" bg="light" >
         <Container>
-          <Navbar.Brand href="#">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#">E-commerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -34,6 +35,8 @@ const NavbarComponent = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
+            
+            <Stack direction="horizontal" gap={3} >
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -43,12 +46,14 @@ const NavbarComponent = () => {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
-            <Navbar.Text className="signUp">
-              <a href="#login">Sign up</a>
-            </Navbar.Text>
-            <Navbar.Text className="Login">
-            <Link to='/login'>Log in</Link>
-            </Navbar.Text>
+              <div className="signUp" >
+                <Nav.Link href='/signup'>Sign up </Nav.Link>
+              </div>
+              
+              <div className="Login" >
+                <Nav.Link href='/login'> Log in</Nav.Link>
+              </div>
+            </Stack>
           </Navbar.Collapse>
         </Container>
       </Navbar>

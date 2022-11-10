@@ -4,7 +4,8 @@ import DetallesProduct from '../pages/DetallesProduct'
 import Error404 from '../pages/Error404'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
-import SingUp from '../pages/SignUp'
+import SignUp from '../pages/SignUp'
+
 
 
 
@@ -15,7 +16,7 @@ const RoutesIndex = () => {
       <Route path='/detalles' element={<DetallesProduct />} />
         
       <Route path='/login' element={<Login />} />
-      <Route path='/singup' element={<SingUp />} />
+      <Route path='/signup' element={<SignUp />} />
       <Route path='*' element={<Error404 />} />
     </Routes>
   )
