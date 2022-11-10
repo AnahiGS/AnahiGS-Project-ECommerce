@@ -1,7 +1,6 @@
 import React from 'react'
 import CarouselPrincipal from "../components/CarouselPrincipal";
 import ProductsList from "../components/ProductsList";
-import SidebarSearch from '../components/Sidebar';
 
 const Home = () => {
   return (

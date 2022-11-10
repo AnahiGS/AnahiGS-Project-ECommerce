@@ -4,21 +4,10 @@ import { Card, Button, Row } from "react-bootstrap";
 import SidebarSearch from './Sidebar';
 import Producto from './Producto';
 import './Products.css'
+import { useProductContext } from "../context/ProductContext";
 
 const ProductsList = () => {
-  const BASE_URL = "https://ecomerce-master.herokuapp.com/api/v1/";
-  
-  const [ProductsArray, setProductsArray] = useState([]);
-  const [ProductsInfo, setProductsInfo] = useState({})
-
-  
-  useEffect(() => {
-
-    axios
-      .get(`${BASE_URL}item`)
-      .then((data) => setProductsArray(data.data))
-      .catch((error) => console.log("error calling API"));
-  }, []);
+  const context = useProductContext()
 
 
   return (
@@ -28,17 +17,26 @@ const ProductsList = () => {
           
           <div className='col'>
             <div id='box-products' className='row row-cols-4'>
-                { ProductsArray.length===0 ? (<h3>Cargando...</h3>)
-                  : (ProductsArray.map((item,index) => (
-                      item.image !== undefined &&(
+                { context.loading
+                  ? <p className='textLoading py-2'>Cargando...</p>
+                  : context.productList.filter(item => {
+                    if (context.search === '') {
+                      return item
+                    } else if (item.product_name.toLowerCase().includes(context.search.toLowerCase())) {
+                      return item
+                    }
+                    return null
+                  })
+                    .map((item, index) => ((
+                        <div key={index} className='cardProduct '>
+
+                            <Producto
+                            {...item}/>
+                        </div>
                         
-                        <Producto
-                          product={item}
-                          key={index}
-                        />
                       )             
                     ) 
-                  )) 
+                  )
                 }  
             </div>
           </div>

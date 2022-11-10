@@ -6,7 +6,7 @@ import { useProductContext } from '../context/ProductContext'
 
 import './Products.css'
 
-const Producto = ({product}) => {
+const Producto = ({ product_name, image, price, _id, brand }) => {
     // console.log(product._id)
     const context =useProductContext()
     const navigate = useNavigate()
@@ -16,21 +16,21 @@ const Producto = ({product}) => {
     }
   return (
     <>
-        <div className="col mb-3" onClick={() => recoverProduct(product._id)}>
+        <div className="col mb-3" onClick={() => recoverProduct(_id)}>
             <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer' }} className='card-product'>
                 <Card.Img
                     fluid
                     className='card-image'
                     variant="top" 
-                    src={product.image}
+                    src={image}
                 />
                 <Card.Body>
-                    <Card.Title>{product.product_name}</Card.Title>
+                    <Card.Title>{product_name}</Card.Title>
                     <Card.Text className='brand-product'>
-                        {product.brand}
+                        {brand}
                     </Card.Text>
                     <Card.Text className='priceProduct'>
-                        <h5><b>${product.price} MXN</b></h5>
+                        <h5><b>${price} MXN</b></h5>
                         <Button style={{ width: '4rem'}} >
                         Ver
                         </Button>
