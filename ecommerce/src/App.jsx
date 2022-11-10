@@ -6,16 +6,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import ProductsList from "./components/ProductsList";
 import NavbarComponent from './components/Navbar';
 import RoutesIndex from "./routes/index";
+import { ProductProvider } from "./context/ProductContext";
 
 function App() {
 
   
   return (
-    <div className="App">
-      <NavbarComponent/>
-      <RoutesIndex />
-      
-    </div>
+    <ProductProvider>
+      <div className="App">
+        <NavbarComponent/>
+        <RoutesIndex />   
+      </div>
+    </ProductProvider>
   );
 }
 

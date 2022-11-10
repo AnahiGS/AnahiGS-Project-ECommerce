@@ -12,11 +12,12 @@ function ProductProvider (props) {
 
   /* Se obtienen los productos de la API */
   useEffect(() => {
+    
     axios
       .get(`${BASE_URL}item`)
       .then(({ data }) => {
-        setProductList(data)
         setLoading(false)
+        setProductList(data)
         // console.log(productList)
       })
       .catch((error) => console.log(error))
@@ -33,6 +34,7 @@ function ProductProvider (props) {
   }
 
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <ProductContext.Provider value={value}>
       {props.children}
     </ProductContext.Provider>
