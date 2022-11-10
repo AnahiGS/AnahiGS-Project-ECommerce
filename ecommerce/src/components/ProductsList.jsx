@@ -30,7 +30,7 @@ const ProductsList = () => {
           </div>
           <div className='col'>
             <div id='box-products' className='row row-cols-4'>
-                { ProductsArray.length===0 ? (<h3>cargando productos</h3>)
+                { ProductsArray.length===0 ? (<h3>Cargando...</h3>)
                   : (ProductsArray.map((item,index) => (
                       item.image !== undefined &&(
                         <Producto

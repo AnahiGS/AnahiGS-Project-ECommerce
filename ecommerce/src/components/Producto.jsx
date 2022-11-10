@@ -1,11 +1,19 @@
 import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
+import context from "react-bootstrap/esm/AccordionContext";
 import { useParams, useNavigate } from 'react-router-dom'
+import { useProductContext } from '../context/ProductContext'
 
 import './Products.css'
 
 const Producto = ({product}) => {
+    // console.log(index)
+    const context =useProductContext()
     const navigate = useNavigate()
+    const recoverProduct = (id) =>{
+        
+        navigate('/detalles')
+    }
   return (
     <>
         <div className="col mb-3" >
@@ -23,7 +31,7 @@ const Producto = ({product}) => {
                     </Card.Text>
                     <Card.Text className='priceProduct'>
                         <h5><b>${product.price} MXN</b></h5>
-                        <Button style={{ width: '4rem'}} onClick={() => {navigate('/portafolio')}}>
+                        <Button style={{ width: '4rem'}} onClick={() => recoverProduct(product._id)} >
                         Ver
                         </Button>
                     </Card.Text>

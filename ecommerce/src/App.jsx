@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import CarouselPrincipal from "./components/CarouselPrincipal";
 // import NavbarComponent from "./components/Navbar";
 // import ProductsList from "./components/ProductsList";
-import Home from './pages/Home';
 import NavbarComponent from './components/Navbar';
+import RoutesIndex from "./routes/index";
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent/>
-      <Home/>
+      <RoutesIndex />
       
     </div>
   );

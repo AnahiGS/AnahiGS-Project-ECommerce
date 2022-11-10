@@ -1,24 +1,23 @@
 import React from 'react'
 import { useProductContext } from '../context/ProductContext'
+import { Container, Image } from "react-bootstrap";
 
-const DetallesProduct = () => {
-    const context = useProductContext()
+const DetallesProduct = ({product}) => {
+    
 
     return (
         <>
-            {context.selectedProduct.product_name
-                ?   <div className="col mb-3" >
-                        <Container>
-                            <Image 
-                                src={context.selectedProduct.image}
-                            />
-                            <h1>{context.selectedProduct.product_name}</h1>
-                            <h4>{context.selectedProduct.brand}</h4>
-                            <h6>{context.selectedProduct.price}</h6>
-                        </Container> 
-                    </div>:
-            }
-                
+             <div className="col mb-3" >
+                  <Container>
+                      <Image 
+                          src={product.image}
+                      />
+                      <h1>{product.product_name}</h1>
+                      <h4>{product.descripcion}</h4>
+                      <h6>{product.price}</h6>
+                  </Container> 
+                </div>
+                   
         </>
     )
 }

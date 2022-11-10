@@ -7,6 +7,7 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
@@ -46,7 +47,7 @@ const NavbarComponent = () => {
               <a href="#login">Sign up</a>
             </Navbar.Text>
             <Navbar.Text className="Login">
-              <a href="#login">Login</a>
+            <Link to='/login'>Log in</Link>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
