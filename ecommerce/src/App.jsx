@@ -7,18 +7,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarComponent from './components/Navbar';
 import RoutesIndex from "./routes/index";
 import { ProductProvider } from "./context/ProductContext";
+import {AuthProvider} from './context/AuthContext'
 
 function App() {
 
   
   return (
-    <ProductProvider>
-      <div className="App">
-        <NavbarComponent
-        />
-        <RoutesIndex />   
-      </div>
-    </ProductProvider>
+    <AuthProvider>
+      <ProductProvider>
+        <div className="App">
+          <NavbarComponent
+          />
+          <RoutesIndex />   
+        </div>
+      </ProductProvider>
+    </AuthProvider>
   );
 }
 
