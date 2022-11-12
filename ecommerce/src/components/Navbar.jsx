@@ -1,9 +1,13 @@
 import React from "react";
 import { Button, Container,Form,Nav,Navbar,NavDropdown, Stack} from "react-bootstrap";
 import { useProductContext } from "../context/ProductContext";
+import { useContext } from "react";
+import {AuthContext} from '../context/AuthContext'
 
 
 const NavbarComponent = () => {
+  const {isAuth, logout } =useContext(AuthContext)
+
   const context = useProductContext()
   const handleSearch = (event) => {
     context.setSearch(event.target.value)
@@ -45,13 +49,28 @@ const NavbarComponent = () => {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
-              <div className="signUp" >
-                <Nav.Link href='/signup'>Sign up </Nav.Link>
-              </div>
-              
-              <div className="Login" >
-                <Nav.Link href='/login'> Log in</Nav.Link>
-              </div>
+            {
+              !isAuth
+                ? (
+                  <>
+                    <div className="signUp" >
+                      <Nav.Link href='/signup'>Sign up </Nav.Link>
+                    </div>
+                    <div className="Login" >
+                      <Nav.Link href='/login'> Log in</Nav.Link>
+                    </div>
+                  </>
+                  ) : (
+                    <>
+                      <div className="User" >
+                      <Nav.Link href='/'>User </Nav.Link>
+                      </div>
+                      <div className="Log-out" >
+                        <Nav.Link href='/' onClick={logout}> Log out</Nav.Link>
+                      </div> 
+                    </>
+                  )
+                  }
             </Stack>
           </Navbar.Collapse>
         </Container>
