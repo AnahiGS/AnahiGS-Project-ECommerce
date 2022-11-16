@@ -9,6 +9,7 @@ function ProductProvider (props) {
   const [selectedProduct, setSelectedProduct] =useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState ('')
+  const [categories, setCategories] = useState ('')
   
 
   /* Se obtienen los productos de la API */
@@ -31,7 +32,9 @@ function ProductProvider (props) {
     loading,
     selectedProduct, setSelectedProduct,
     search,
-    setSearch
+    setSearch,
+    categories,
+    setCategories
   }
 
   return (

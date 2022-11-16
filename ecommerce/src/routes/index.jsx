@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import DetallesProduct from '../pages/DetallesProduct'
 import Error404 from '../pages/Error404'
 import Home from '../pages/Home'

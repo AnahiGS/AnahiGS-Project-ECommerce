@@ -1,5 +1,4 @@
-import React, {useEffect,useState} from "react";
-import axios from "axios";
+import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
 import SidebarSearch from './Sidebar';
 import Producto from './Producto';
@@ -22,7 +21,7 @@ const ProductsList = () => {
                   : context.productList.filter(item => {
                     if (context.search === '') {
                       return item
-                    } else if (item.product_name.toLowerCase().includes(context.search.toLowerCase())) {
+                    } else if (item.product_name.toLowerCase().includes(context.search.toLowerCase()) ) {
                       return item
                     }
                     return null
