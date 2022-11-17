@@ -8,7 +8,7 @@ const Home = () => {
     
          <div className='Home'>
             <CarouselPrincipal/>
-            <div className="container">
+            <div className="container m-5">
               <SidebarSearch/>
             </div>
             <ProductsList/>

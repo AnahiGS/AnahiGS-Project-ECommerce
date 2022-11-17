@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./Carousel.css"
+import imagen from '../assets/depositphotos_110819108-stock-illustration-grocery-shopping-discount-banner.jpg'
 
 const CarouselPrincipal = () => {
   const BASE_URL = "https://ecomerce-master.herokuapp.com/api/v1/";
@@ -23,7 +24,7 @@ const CarouselPrincipal = () => {
           <img
             
             className="d-block w-100"
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
+            src={imagen}
             alt="First slide"
           />
           <Carousel.Caption>

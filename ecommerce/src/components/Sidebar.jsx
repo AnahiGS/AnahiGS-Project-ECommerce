@@ -19,15 +19,15 @@ const SidebarSearch = () => {
     return (
         <div className="col-12 d-flex align-content-center justify-content-center">
             <div style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-                <div className="row">
-                <div className="col-lg-12">
-                    <div className="section-head-style-one">
-                    <h1>Categories</h1>
+                <Row>
+                    <div className="col-12">
+                        
+                        <h1>Categories</h1>
+                        
                     </div>
-                </div>
-                </div>
+                </Row>
 
-                
+                <Row>
                 <div className='container py-4 px-4 justify-content-center bg-light'>
                     <Swiper
                     FreeMode={true}
@@ -35,38 +35,38 @@ const SidebarSearch = () => {
                     modules={[FreeMode]}
                     className='mySwiper'
                     slidesPerView={5}
-                    spaceBetween={10}
+                    spaceBetween={8}
                     >
                         <SwiperSlide>
-                            <h1 style={{ cursor: 'pointer' }} name='Health' >Health
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Health' >Health
                             </h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <h1 style={{ cursor: 'pointer' }} name='Outdoors'>Outdoors
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Outdoors'>Outdoors
                             </h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <h1 style={{ cursor: 'pointer' }} name='Grocery'>Grocery
-                        </h1>  
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Grocery'>Grocery
+                            </h1>  
                         </SwiperSlide>
                         <SwiperSlide>
-                        <h1 style={{ cursor: 'pointer' }} name='Sports'>Sports
-                        </h1>
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Sports'>Sports
+                            </h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <h1 style={{ cursor: 'pointer' }} name='Kids'>Kids
-                        </h1>
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Kids'>Kids
+                            </h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <h1 style={{ cursor: 'pointer' }} name='Jewerly'>Jewerly
-                        </h1>
+                            <h1 style={{ cursor: 'pointer', fontSize: '30px' }} name='Jewerly'>Jewerly
+                            </h1>
                         </SwiperSlide>
                         
                         
                             
                     </Swiper>
                 </div>
-                   
+                </Row>   
             </div>
         </div> 
     );
