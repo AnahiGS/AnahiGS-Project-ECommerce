@@ -3,6 +3,8 @@ import { Button, Container,Form,Nav,Navbar,NavDropdown, Stack} from "react-boots
 import { useProductContext } from "../context/ProductContext";
 import { useContext } from "react";
 import {AuthContext} from '../context/AuthContext'
+import icon from '../assets/cart-outline.svg'
+
 
 
 const NavbarComponent = () => {
@@ -62,6 +64,7 @@ const NavbarComponent = () => {
                   </>
                   ) : (
                     <>
+                      <img className='mb' src={icon} alt='shopping-car'  width='28' height='45'  /> 
                       <div className="User" >
                       <Nav.Link href='/'>User </Nav.Link>
                       </div>
