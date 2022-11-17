@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./Carousel.css"
 import imagen from '../assets/depositphotos_110819108-stock-illustration-grocery-shopping-discount-banner.jpg'
+import image from '../assets/spo.jpg'
+import img from '../assets/diet.png'
 
 const CarouselPrincipal = () => {
   const BASE_URL = "https://ecomerce-master.herokuapp.com/api/v1/";
@@ -35,7 +37,7 @@ const CarouselPrincipal = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
+            src={image}
             alt="Second slide"
           />
 
@@ -47,7 +49,7 @@ const CarouselPrincipal = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
+            src={img}
             alt="Third slide"
           />
 
