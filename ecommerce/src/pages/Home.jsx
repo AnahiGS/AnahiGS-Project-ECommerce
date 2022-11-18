@@ -11,7 +11,9 @@ const Home = () => {
             <div className="container m-5">
               <SidebarSearch/>
             </div>
-            <ProductsList/>
+            <div className='container box-products'>
+              <ProductsList/>
+            </div>
         </div>
     
   );

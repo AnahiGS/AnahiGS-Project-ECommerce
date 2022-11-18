@@ -16,9 +16,10 @@ const Producto = ({ product_name, image, price, _id, brand, description }) => {
     }
   return (
     <>
-        <div className="col mb-3" onClick={() => recoverProduct(_id)}>
-            <Card style={{ width: '15rem', height: '25rem', cursor: 'pointer' }} className='card-product'>
+        <div className="col mb-3 " onClick={() => recoverProduct(_id)}>
+            <Card style={{ width: 'auto', height: 'auto', cursor: 'pointer' }} className='card-product border border-success '>
                 <Card.Img
+                    
                     fluid
                     className='card-image'
                     variant="top" 
@@ -31,7 +32,7 @@ const Producto = ({ product_name, image, price, _id, brand, description }) => {
                     </Card.Text>
                     <Card.Text className='priceProduct'>
                         <h5><b>${price} MXN</b></h5>
-                        <Button style={{ width: '4rem'}} >
+                        <Button className='btn btn-light btn btn-outline-success' style={{ width: '4rem'}} >
                         Ver
                         </Button>
                     </Card.Text>
