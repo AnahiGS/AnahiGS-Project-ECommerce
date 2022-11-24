@@ -19,7 +19,7 @@ const NavbarComponent = () => {
     
       <Navbar expand="lg" variant="light" bg="light" >
         <Container>
-          <Navbar.Brand href="#">E-commerce</Navbar.Brand>
+          <Navbar.Brand href="/">E-commerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -64,7 +64,8 @@ const NavbarComponent = () => {
                   </>
                   ) : (
                     <>
-                      <img className='mb' src={icon} alt='shopping-car'  width='28' height='45'  /> 
+                      
+                      <Nav.Link href='/carshopping'><img className='mb' src={icon} alt='shopping-car'  width='28' height='45'/> </Nav.Link> 
                       <div className="User" >
                       <Nav.Link href='/'>User </Nav.Link>
                       </div>
